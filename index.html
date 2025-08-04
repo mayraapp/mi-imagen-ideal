@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mi Imagen Ideal</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <img src="img/logo.png" alt="Mi Imagen Ideal" class="logo" />
+  <nav>
+    <ul>
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#peinados">Peinados</a></li>
+      <li><a href="#tutoriales">Tutoriales</a></li>
+      <li><a href="#pasos-peinados">Pasos</a></li>
+      <li><a href="#favoritos">Favoritos</a></li>
+      <li><a href="#" onclick="mostrarLogin()">Iniciar Sesión</a></li>
+      <li><a href="#" onclick="mostrarRegistro()">Registrarse</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section id="inicio" class="hero-section">
+  <div class="hero-overlay">
+    <h1 class="hero-title">Descubre tu Estilo Ideal</h1>
+    <p class="hero-subtitle">Peinados que realzan tu belleza</p>
+    <div class="hero-buttons">
+      <button class="btn-primary" onclick="scrollToSection('peinados')">Explorar Peinados</button>
+      <button class="btn-secondary" onclick="scrollToSection('tutoriales')">Ver Tutoriales</button>
+    </div>
+  </div>
+</section>
+
+<section id="peinados" class="contenedor">
+  <h2>Peinados Populares</h2>
+  <div class="articulos" id="lista-peinados">
+    <article>
+      <img src="img/peinado1.jpg" alt="Peinado clásico" />
+      <h3>Peinado Clásico</h3>
+      <p>Ideal para eventos formales. Perfecto si tienes rostro ovalado.</p>
+      <button onclick="guardarFavorito('Peinado Clásico', 'img/peinado1.jpg')">❤️ Guardar</button>
+    </article>
+    <article>
+      <img src="img/peinado2.jpg" alt="Trenza Moderna" />
+      <h3>Trenza Moderna</h3>
+      <p>Look juvenil ideal para rostros redondos.</p>
+      <button onclick="guardarFavorito('Trenza Moderna', 'img/peinado2.jpg')">❤️ Guardar</button>
+    </article>
+    <article>
+      <img src="img/peinado3.jpg" alt="Coleta Alta" />
+      <h3>Coleta Alta</h3>
+      <p>Favorece rostros cuadrados o alargados.</p>
+      <button onclick="guardarFavorito('Coleta Alta', 'img/peinado3.jpg')">❤️ Guardar</button>
+    </article>
+    <article>
+      <img src="img/peinado4.jpg" alt="Ondas Suaves" />
+      <h3>Ondas Suaves</h3>
+      <p>Perfecto para rostros en forma de corazón.</p>
+      <button onclick="guardarFavorito('Ondas Suaves', 'img/peinado4.jpg')">❤️ Guardar</button>
+    </article>
+  </div>
+</section>
+
+<!-- NUEVA SECCIÓN: PASOS PARA HACER LOS PEINADOS -->
+<section id="pasos-peinados" class="contenedor pasos-peinados">
+  <h2>¿Cómo hacer estos peinados? Pasos sencillos</h2>
+
+  <div class="peinado-paso" id="paso-peinado1">
+    <h3>Peinado Clásico</h3>
+    <ol>
+      <li>Lava y seca tu cabello completamente.</li>
+      <li>Aplica protector térmico.</li>
+      <li>Usa una plancha para alisar mechones si es necesario.</li>
+      <li>Haz una raya al medio o al lado, según prefieras.</li>
+      <li>Fija con un poco de spray para mantener el peinado.</li>
+    </ol>
+  </div>
+
+  <div class="peinado-paso" id="paso-peinado2">
+    <h3>Trenza Moderna</h3>
+    <ol>
+      <li>Desenreda bien tu cabello.</li>
+      <li>Divide el cabello en tres mechones iguales.</li>
+      <li>Comienza a trenzar cruzando mechones por encima alternadamente.</li>
+      <li>Al llegar al final, asegura con una liga.</li>
+      <li>Afloja un poco la trenza para darle volumen y un estilo más natural.</li>
+    </ol>
+  </div>
+
+  <div class="peinado-paso" id="paso-peinado3">
+    <h3>Coleta Alta</h3>
+    <ol>
+      <li>Recoge todo tu cabello hacia arriba con un cepillo para evitar nudos.</li>
+      <li>Asegura la coleta con una liga resistente.</li>
+      <li>Si quieres, envuelve un mechón alrededor de la liga y fíjalo con un pasador.</li>
+      <li>Aplica spray fijador para mayor duración.</li>
+    </ol>
+  </div>
+
+  <div class="peinado-paso" id="paso-peinado4">
+    <h3>Ondas Suaves</h3>
+    <ol>
+      <li>Aplica espuma para ondas en el cabello húmedo.</li>
+      <li>Seca con difusor para formar ondas naturales.</li>
+      <li>Si usas rizador, haz rizos grandes y sueltos.</li>
+      <li>Pasa los dedos suavemente para separar las ondas.</li>
+      <li>Termina con spray fijador suave.</li>
+    </ol>
+  </div>
+</section>
+
+<section id="tutoriales" class="videos-container">
+  <h2>Tutoriales en Video</h2>
+  <div class="video-item">
+    <iframe width="320" height="180" src="https://www.youtube.com/embed/QDDKimqllX0" frameborder="0" allowfullscreen></iframe>
+    <h3>Tutorial Peinado 1</h3>
+  </div>
+  <div class="video-item">
+    <iframe width="320" height="180" src="https://www.youtube.com/embed/q1KeTfqdo28" frameborder="0" allowfullscreen></iframe>
+    <h3>Tutorial Peinado 2</h3>
+  </div>
+  <div class="video-item">
+    <iframe width="320" height="180" src="https://www.youtube.com/embed/MFfzE_lSeBA" frameborder="0" allowfullscreen></iframe>
+    <h3>Tutorial Peinado 3</h3>
+  </div>
+</section>
+
+<section id="favoritos" class="favoritos">
+  <h2>Mis Peinados Favoritos</h2>
+  <div id="favoritosContainer"></div>
+</section>
+
+<footer>
+  <p>&copy; 2025 Mi Imagen Ideal | Diseñado con 💖 para ti</p>
+</footer>
+
+<!-- Modal Login -->
+<div id="loginModal" class="modal">
+  <div class="modal-content">
+    <span onclick="cerrarLogin()" class="close">&times;</span>
+    <h2>Iniciar Sesión</h2>
+    <input type="text" id="usuario" placeholder="Correo electrónico" />
+    <input type="password" id="contrasena" placeholder="Contraseña" />
+    <button onclick="iniciarSesion()">Entrar</button>
+    <p id="loginMsg"></p>
+  </div>
+</div>
+
+<!-- Modal Registro -->
+<div id="registroModal" class="modal">
+  <div class="modal-content">
+    <span onclick="cerrarRegistro()" class="close">&times;</span>
+    <h2>Registrarse</h2>
+    <input type="text" id="nombreRegistro" placeholder="Nombre completo" />
+    <input type="email" id="emailRegistro" placeholder="Correo electrónico" />
+    <input type="password" id="passRegistro" placeholder="Contraseña" />
+    <button onclick="registrarUsuario()">Registrarse</button>
+    <p id="registroMsg"></p>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

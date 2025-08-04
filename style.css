@@ -1,0 +1,335 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #fff0f5;
+  color: #333;
+  scroll-behavior: smooth;
+  min-height: 100vh;
+}
+
+header {
+  background: #d94f70;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 30px;
+  flex-wrap: wrap;
+}
+
+.logo {
+  height: 120px;
+  width: auto;
+  margin-right: 20px;
+}
+
+nav {
+  flex-grow: 1;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  display: inline-flex;
+  gap: 30px;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.3rem;
+  padding: 8px 15px;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #ff8fc0;
+  cursor: pointer;
+}
+
+.hero-section {
+  position: relative;
+  height: 100vh;
+  background: url('img/hero-bg.jpg') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-overlay {
+  background-color: rgba(217, 79, 112, 0.7);
+  padding: 40px;
+  border-radius: 20px;
+  color: white;
+  max-width: 600px;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+.hero-buttons button {
+  margin: 0 15px;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #ff4c81;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #e64374;
+}
+
+.btn-secondary {
+  background-color: white;
+  color: #d94f70;
+  border: 2px solid #d94f70;
+}
+
+.btn-secondary:hover {
+  background-color: #d94f70;
+  color: white;
+}
+
+.contenedor {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+h2 {
+  color: #d94f70;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+.articulos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+}
+
+.articulos article {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgb(217 79 112 / 0.3);
+  width: 280px;
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.articulos article:hover {
+  transform: translateY(-8px);
+}
+
+.articulos img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.articulos h3 {
+  margin: 0 0 10px;
+  color: #b82f58;
+}
+
+.articulos p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.articulos button {
+  margin-top: 15px;
+  background: #d94f70;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 25px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.articulos button:hover {
+  background: #b82f58;
+}
+
+.videos-container {
+  max-width: 1200px;
+  margin: 40px auto 60px;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.video-item {
+  display: inline-block;
+  margin: 20px;
+  vertical-align: top;
+  width: 320px;
+}
+
+.video-item h3 {
+  margin-top: 10px;
+  color: #b82f58;
+  font-weight: 700;
+}
+
+.favoritos {
+  background: #ffe6f0;
+  padding: 30px 20px;
+  border-radius: 20px;
+  max-width: 1100px;
+  margin: 0 auto 60px;
+  box-shadow: 0 6px 18px rgba(217, 79, 112, 0.3);
+}
+
+#favoritosContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+#favoritosContainer div {
+  background: white;
+  border-radius: 12px;
+  padding: 10px;
+  width: 160px;
+  box-shadow: 0 2px 8px rgb(217 79 112 / 0.2);
+  text-align: center;
+}
+
+#favoritosContainer img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 8px;
+}
+
+/* NUEVA SECCIÓN PASOS PEINADOS */
+.pasos-peinados {
+  background: #ffe6f0;
+  padding: 40px 20px;
+  border-radius: 20px;
+  margin: 40px auto;
+  max-width: 900px;
+  box-shadow: 0 6px 18px rgba(217, 79, 112, 0.3);
+  text-align: left;
+}
+
+.pasos-peinados h2 {
+  color: #b82f58;
+  text-align: center;
+  margin-bottom: 35px;
+  font-size: 2.8rem;
+}
+
+.peinado-paso {
+  margin-bottom: 30px;
+}
+
+.peinado-paso h3 {
+  color: #d94f70;
+  margin-bottom: 12px;
+  font-size: 1.8rem;
+  cursor: pointer;
+  user-select: none;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.peinado-paso h3:hover {
+  border-color: #b82f58;
+}
+
+.peinado-paso ol {
+  padding-left: 20px;
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.6;
+  display: none;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+  background: white;
+  margin: 10% auto;
+  padding: 20px;
+  width: 320px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 6px 15px rgba(217, 79, 112, 0.5);
+}
+
+.modal-content input {
+  width: 90%;
+  padding: 12px;
+  margin: 12px 0;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+}
+
+.modal-content button {
+  background: #d94f70;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.modal-content button:hover {
+  background: #b82f58;
+}
+
+.close {
+  float: right;
+  font-size: 28px;
+  font-weight: 700;
+  cursor: pointer;
+  color: #d94f70;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #d94f70;
+  color: white;
+  margin-top: 40px;
+}
