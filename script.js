@@ -76,8 +76,9 @@ function mostrarFavoritos() {
 
   favoritos.forEach(fav => {
     const div = document.createElement("div");
+    div.style.marginBottom = "1em";
     div.innerHTML = `
-      <img src="${fav.imagen}" alt="${fav.nombre}">
+      <img src="${fav.imagen}" alt="${fav.nombre}" style="max-width: 150px; border-radius: 8px;" />
       <p>${fav.nombre}</p>
     `;
     contenedor.appendChild(div);
@@ -91,6 +92,7 @@ function scrollToSection(id) {
 
 // Acordeón para los pasos de peinados
 document.querySelectorAll('.peinado-paso h3').forEach(title => {
+  title.style.cursor = 'pointer';
   title.addEventListener('click', () => {
     const ol = title.nextElementSibling;
     if (ol.style.display === 'block') {
